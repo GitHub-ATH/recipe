@@ -74,16 +74,16 @@ aside {
 }
 
 h1 {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     font-size: 40px;
     text-align: center;
 }
 h2 {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     font-size: 30px;
 }
 h3 {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     font-size: 25px;
 }
 p, dd, li, nav, input {
@@ -96,7 +96,7 @@ dt {
     font-size: 16px;
 }
 nav a, nav span, menu li, #social li, footer {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     font-size: 20px;
 }
 aside a {
@@ -108,17 +108,17 @@ nav a {
     text-decoration: none;
 }
 header ul li {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     text-align: center;
     color: var(--orange);
 }
 header ul li a {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     text-decoration: none;
     color: var(--orange);
 }
 footer p {
-    font-family: Bebas Neue;
+    font-family: "Bebas Neue";
     font-weight: bold;
 }
 footer ul li a p {
@@ -184,7 +184,7 @@ aside section h4 {
     margin: 1em;
 }
 
-/*I wasn't able to position the <nav> at all, despite long hours trying.*/
+/*I wasn't able to position the <nav> at all, despite an untold amount of hours trying. I would love to see how this is done.*/
 nav {
     position: fixed;
     top: 0px;
@@ -279,7 +279,6 @@ footer p {
     footer img {
         grid-column: 1;
         grid-row: 1 / span 2;
-        align-self: left;
     }
     footer p {
         grid-column: 1;
@@ -296,7 +295,7 @@ footer p {
 
     header {
         display: grid;
-        grid-template-columns: 1 1fr 1fr;
+        grid-template-columns: .3fr 1fr 1fr;
     }
     header h1 {
         grid-column-start: 1;
