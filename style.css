@@ -126,6 +126,10 @@ footer ul li a p {
     color: var(--orange);
 }
 
+page {
+    position: relative;
+}
+
 header ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -141,6 +145,11 @@ header img {
 header p {
     padding: .5em;
     line-height: 1.3em;
+}
+header h1 {
+    font-weight: bold;
+    margin-bottom: .45em;
+    padding-top: 3.25em;
 }
 
 main h2 {
@@ -177,38 +186,106 @@ aside h2 {
 aside section h4 {
     display: none;
 }
-#sidedishesdiv {
-    display: grid;
-}
-.sidedish img {
-    margin: 1em;
-}
 
-/*I wasn't able to position the <nav> at all, despite an untold amount of hours trying. I would love to see how this is done.*/
 nav {
-    position: fixed;
     top: 0px;
-    background-color: var(--white);
-    overflow: hidden;
+    width: 414px;
+    font-size: 0;
+    /*background-color: var(--white);*/
 }
-nav h2 {
+nav > h2 {
+    top: 0;
+    position: fixed;
+    display: inline-block;
+    background-color: var(--white);
+    padding: .5em 1.5em;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0px 5px 2px rgba(150, 150, 150, 0.25);
+    z-index: 1;
+}
+nav > h2 a {
+    display: block;
+}
+nav > ul {
+    top: 0;
+    left: calc(100vw / 2 - 207px + 91.5px);
+    position: fixed;
+    display: inline-block;
+    background-color: var(--white);
+    width: 314px;
+    box-shadow: 0px 5px 2px rgba(150, 150, 150, 0.25);
+    z-index: 1;
+}
+nav > ul > li {
     display: none;
 }
-nav ul {
-    display: flex;
+nav > ul li:first-child {
+    display: inline-block;
+    padding: .5em 85px;
+    font-size: 20px;
+    background-color: var(--orange);
+    max-width: 170px;
+}
+nav > ul li:first-child span {
+    display: none;
+}
+nav > ul li:last-child {
+    display: inline-block;
+    text-align: center;
+    margin-left: 8px;
+}
+nav > ul li:last-child a {
+    color: var(--black);
+}
+nav > ul li:last-child a span {
+    display: block;
+    font-weight: bold;
+}
+nav > ul li:last-child a svg {
+    display: inline-block;
+    stroke: var(--orange);
+    width: 40px;
+    height: 40px;
 }
 nav ul li img {
     width: 60px;
 }
 nav svg {
-    background-color: var(--orange);
+    background-color: transparent;
+}
+#signin {
+    background-color: var(--white);
 }
 #hamburger {
     background-color: var(--white);
 }
-form {
-    display: flex;
+nav form {
+    position: absolute;
+    top: 95px;
     justify-content: center;
+    background-color: transparent;
+    margin-top: 2em;
+}
+nav form input {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    height: 3.25em;
+    width: 256px;
+    border: 3px solid var(--orange);
+    font-size: 12px;
+    font-weight: 600;
+}
+nav form svg {
+    position: absolute;
+    height: 45.5px;
+    left: 310px;
+    top: 25px;
+    padding: 0 7px;
+    font-size: 12px;
+    background-color: var(--orange);
 }
 
 footer {
@@ -242,6 +319,10 @@ footer p {
     body {
         min-width: 768px;
         margin: auto;
+    }
+
+    nav {
+        min-width: 768px;
     }
 
     header ul {
@@ -293,6 +374,10 @@ footer p {
         min-width: 1280px;
     }
 
+    nav {
+        min-width: 1280px;
+    }
+
     header {
         display: grid;
         grid-template-columns: .3fr 1fr 1fr;
@@ -338,20 +423,6 @@ footer p {
     }
     .sidedish {
         margin: auto;
-    }
-
-    footer {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    /*This is my best attempt, I struggled for hours but couldn't get the <p> tags to appear correctly at the top right of the <img> tag.*/
-    footer p {
-        display: flex;
-        grid-column: 2;
-        grid-row: 1;
-        justify-self: start;
-    }
-    footer ul {
-        grid-column: 3;
     }
 }
 /*-------------------- MEDIA QUERY (print) --------------------------------*/
