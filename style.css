@@ -354,10 +354,6 @@ footer p {
         margin: auto;
     }
 
-    nav {
-        width: 768px;
-    }
-
     header {
         background-color: transparent;
     }
@@ -401,6 +397,9 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+    nav {
+        width: 768px;
+    }
     nav h2 {
         display: none;
     }
@@ -460,10 +459,6 @@ footer p {
 /*-------------------- MEDIA QUERY (large) --------------------------------*/
 @media screen and (min-width: 1280px) {
     body {
-        min-width: 1280px;
-    }
-
-    nav {
         min-width: 1280px;
     }
 
@@ -537,6 +532,9 @@ footer p {
         grid-column: 1 / 2;
     }
 
+    nav {
+        min-width: 1280px;
+    }
     nav ul {
         width: 1280px;
         left: calc(100vw / 2 - 648px);
@@ -566,6 +564,9 @@ footer p {
         z-index: unset;
         top: 145px;
         left: calc(100vw / 2 - 174px);
+    }
+    nav form svg {
+        height: 46px;
     }
 }
 /*-------------------- MEDIA QUERY (print) --------------------------------*/
