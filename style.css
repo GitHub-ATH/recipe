@@ -63,6 +63,9 @@ table {
 html {
     background-color: var(--light-cyan);
 }
+page {
+    position: relative;
+}
 body {
     background-color: var(--off-white);
     width: 414px;
@@ -126,10 +129,6 @@ footer ul li a p {
     color: var(--orange);
 }
 
-page {
-    position: relative;
-}
-
 header ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -186,12 +185,46 @@ aside h2 {
 aside section h4 {
     display: none;
 }
+.sidedish {
+    display: grid;
+    justify-content: start;
+    padding: 20px 0;
+}
+.sidedish a {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    margin-right: 20px;
+}
+.sidedish a img {
+    width: 100px;
+    margin-left: 12px;
+}
+.sidedish h3 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+.sidedish p {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+.sidedish .rating {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}
+.rating dd {
+    display: none;
+}
+.rating dt {
+    padding: 0;
+    margin-bottom: 5px;
+}
 
 nav {
     top: 0px;
     width: 414px;
     font-size: 0;
-    /*background-color: var(--white);*/
 }
 nav > h2 {
     top: 0;
@@ -322,11 +355,26 @@ footer p {
     }
 
     nav {
-        min-width: 768px;
+        width: 768px;
     }
 
+    header {
+        background-color: transparent;
+    }
+    header h1 {
+        padding-top: 6em;
+        text-align: left;
+        margin-left: .5em;
+    }
     header ul {
         position: relative;
+        background-color: rgba(255, 255, 255, .75);
+    }
+    header ul li a span {
+        display: none;
+    }
+    header img {
+        margin-top: -5.5em;
     }
 
     main {
@@ -351,6 +399,47 @@ footer p {
     #sidedishesdiv {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    nav h2 {
+        display: none;
+    }
+    nav ul {
+        width: 769px;
+        left: calc(100vw / 2 - 393px);
+        padding-top: 100px;
+    }
+    nav ul li {
+        display: inline-block;
+        padding: 0 22.5px;
+        position: relative;
+        text-align: center;
+    }
+    nav ul li a img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 6px;
+    }
+    nav ul li span {
+        display: block;
+        margin-bottom: 16px;
+    }
+    nav > ul li:first-child {
+        padding: 5px;
+        position: absolute;
+        top: 0;
+    }
+    nav > ul li:last-child {
+        padding-top: 5px;
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    nav form {
+        position: fixed;
+        z-index: 999;
+        top: -9px;
+        left: calc(100vw / 2 - 124px);
     }
 
     footer {
@@ -385,6 +474,7 @@ footer p {
     header h1 {
         grid-column-start: 1;
         grid-column-end: 4;
+        text-align: center;
     }
     header ul {
         display: flex;
@@ -398,6 +488,7 @@ footer p {
     }
     header img {
         grid-column: 2;
+        margin-top: 0;
     }
     header div {
         grid-column: 3;
@@ -423,6 +514,58 @@ footer p {
     }
     .sidedish {
         margin: auto;
+    }
+    .sidedish a {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+    .sidedish a img {
+        width: 240px;
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+    .sidedish h3 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    .sidedish p {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    .sidedish .rating {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    nav ul {
+        width: 1280px;
+        left: calc(100vw / 2 - 648px);
+        padding-top: 0;
+        height: 129px;
+    }
+    nav > ul li {
+        margin-top: 15px;
+    }
+    nav > ul li:first-child {
+        position: relative;
+        display: inline-block;
+        padding: 35px;
+        top: -20px;
+        margin-right: 120px;
+    }
+    nav > ul li:last-child {
+        position: relative;
+        display: inline-block;
+        padding: 35px;
+        top: -20px;
+        margin-left: 125px;
+        background-color: transparent;
+    }
+    nav form {
+        position: absolute;
+        z-index: unset;
+        top: 145px;
+        left: calc(100vw / 2 - 174px);
     }
 }
 /*-------------------- MEDIA QUERY (print) --------------------------------*/
